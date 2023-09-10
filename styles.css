@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 auto;
+    background-color: #009688;
+    width: 100vw;
+    height: 9vh;
+    display: block;
+    color: #fff;
+    line-height: 9vh;
+    border-bottom: 1vh solid #cd5c5c;
+}
+
+#wrapper{
+    height: 90vh;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 0.75rem;
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    width: 70vw;
+    top: 10vh;
+    left: 0;
+    position: fixed;
+    height: 100%;
+}
+
+.form-group {
+    margin: 10px 0;
+    display: block;
+    margin: 2rem;
+    text-align: left;
+}
+
+.input-grp{
+    display: block;
+    width: 90%;
+}
+
+#label {
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+label {
+    color: #009688;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+}
+
+button {
+    background-color: #009688;
+    color: #fff;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+#score{
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    background-color: #009688;
+    padding-top: 25%;
+    color: #fff;
+    width: 30vw;
+    position: fixed;
+    top: 9.99vh;
+    right: 0;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#risk-score{
+    color: #fff;
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    /* Adjust styling for small screens */
+    body {
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 1.5rem;
+        height: 10vh;
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+    }
+
+    #wrapper {
+        overflow:hidden;
+        height: 90vh;
+        margin: 0;
+        position: fixed;
+        top: 10vh;
+    }
+
+    button{
+        margin: 1rem 0;
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        height: 65vh;
+        top: 10vh;
+        position: fixed;
+    }
+
+    #label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+        font-size: 1rem;
+    }
+
+    #score{
+        display: block;
+        width: 100vw;
+        height: 25vh;
+        position: fixed;
+        top: 65vh;
+        bottom: 0;
+        line-height: 20vh;    }
+
+    #risk-score {
+        margin: 0;
+    }
+
+    #result {
+        margin: 0.25rem;
+    }
+    /* Add more CSS adjustments as needed */
+}

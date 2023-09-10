@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Insurance Calculator</title>
+</head>
+<body>
+    <h1>Insurance Application Form</h1>
+    <div id="wrapper">
+        <form id="insuranceForm">
+            <div class="form-group">
+                <div class="input-grp">
+                    <label for="name"  id="label"><strong>Name:</strong></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-grp">
+                    <label for="age"  id="label"><strong>Age:</strong></label>
+                    <input type="number" id="age" value="0" name="age" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id="label"><strong>Current Health:</strong><br></label>
+                <div class="input-grp">
+                    <input type="checkbox" id="hypertension" name="healthCondition" value="Hypertension">
+                    <label for="hypertension">Hypertension</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="highSugar" name="healthCondition" value="High Blood Sugar">
+                    <label for="highSugar">High Blood Sugar</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="overweight" name="healthCondition" value="Overweight">
+                    <label for="overweight">Overweight</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  id="label"><strong>Habits:</strong><br></label>
+                <div class="input-grp">
+                    <input type="checkbox" id="exercise" name="habits" value="Regular Exercise">
+                    <label for="exercise">Regular Exercise</label>
+                </div>
+                <!-- Add checkboxes for other habits here -->
+            </div>
+
+            <button type="button" id="calculate">Calculate</button>
+    
+        </form>
+
+
+        <div id="score"><!--class="form-group"-->
+            <label id="risk-score" for="result"><center>Your risk score is</center></label>
+            <p id="result" name="result"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
