@@ -38,20 +38,67 @@
                 </div>
             </div>
             <div class="form-group">
-                <label  id="label"><strong>Habits:</strong><br></label>
+                <label  id="label"><strong>Good Habits:</strong><br></label>
                 <div class="input-grp">
-                    <input type="checkbox" id="exercise" name="habits" value="Regular Exercise">
-                    <label for="exercise">Regular Exercise</label>
+                    <input type="checkbox" id="reg-exercise" name="habits" value="Regular Exercise">
+                    <label for="reg-exercise">Regular Exercise</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="h-diet" name="habits" value="Regular Exercise">
+                    <label for="h-diet">Healthy Diet</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="g-sleep" name="habits" value="Regular Exercise">
+                    <label for="g-sleep">Good Sleep</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="stress-m" name="habits" value="Regular Exercise">
+                    <label for="stress-m">Stress Management</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="alcohol-good" name="habits" value="Regular Exercise">
+                    <label for="alcohol-good">Moderate Alcohol Consumption</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="no-smoker" name="habits" value="Regular Exercise">
+                    <label for="no-smoker">Non-Smoker</label>
                 </div>
                 <!-- Add checkboxes for other habits here -->
             </div>
 
-            <button type="button" id="calculate">Calculate</button>
+            <div class="form-group">
+                <label  id="label"><strong>Bad Habits:</strong><br></label>
+                <div class="input-grp">
+                    <input type="checkbox" id="smoking" name="bhabits" value="irRegular Exercise">
+                    <label for="smoking">Smoking</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="alcohol-bad" name="bhabits" value="irRegular Exercise">
+                    <label for="alcohol-bad">Excessive Alcohol Consumption</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="bad-exercise" name="bhabits" value="irRegular Exercise">
+                    <label for="bad-exercise">Lack of Exercise</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="poor-diet" name="bhabits" value="irRegular Exercise">
+                    <label for="poor-diet">Poor Diet</label>
+                </div>
+                <div class="input-grp">
+                    <input type="checkbox" id="bad-sleep" name="bhabits" value="irRegular Exercise">
+                    <label for="bad-sleep">Inadequate Sleep</label>
+                </div>
+
+                <!-- Add checkboxes for other habits here -->
+            </div>
+
+<!--             <button type="button" id="calculate">Calculate</button> -->
     
         </form>
 
 
         <div id="score"><!--class="form-group"-->
+            <h2 id="hello"></h2>
             <label id="risk-score" for="result"><center>Your risk score is</center></label>
             <p id="result" name="result"></p>
         </div>

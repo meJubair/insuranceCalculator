@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const cname = document.getElementById("name");
     const ageInput = document.getElementById("age");
     const healthConditions = document.querySelectorAll('input[name="healthCondition"]');
     const habits = document.querySelectorAll('input[name="habits"]');
+    const bHabits = document.querySelectorAll('input[name="bhabits"]');
     const resultInput = document.getElementById("result");
 
     // Calculate the risk score
@@ -44,12 +46,27 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        // Calculate bad habits score
+        bHabits.forEach(function(bHabit) {
+            if (bHabit.checked) {
+                if (bHabit.value === "irRegular Exercise") {
+                    riskScore += riskScore * 0.05;
+                } else {
+                    riskScore -= riskScore * 0.05;
+                }
+            }
+        });
+
         // Display the calculated risk score
         resultInput.textContent = (parseFloat(riskScore)).toFixed(2);
+        document.getElementById("hello").textContent = `Hello ${cname.value}!`;
     }
 
     // Update the event listener for the age input
     ageInput.addEventListener("input", calculateRiskScore);
+
+    // Update the event listener for the name input
+    cname.addEventListener("change", calculateRiskScore);
 
     // Update results onchange to relevant form elements
     healthConditions.forEach(function(healthCondition) {
@@ -60,7 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
         habit.addEventListener("change", calculateRiskScore);
     });
 
+    bHabits.forEach(function(bHabit) {
+        bHabit.addEventListener("change", calculateRiskScore);
+    });
+
     // Initially calculate and display the risk score
     calculateRiskScore();
 });
-

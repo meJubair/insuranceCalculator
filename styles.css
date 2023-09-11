@@ -11,10 +11,10 @@ h1 {
     margin: 0 auto;
     background-color: #009688;
     width: 100vw;
-    height: 9vh;
+    height: 10vh;
     display: block;
     color: #fff;
-    line-height: 9vh;
+    line-height: 10vh;
     border-bottom: 1vh solid #cd5c5c;
 }
 
@@ -24,19 +24,21 @@ h1 {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "sd1 sd2";
 }
 
 form {
-    display: inline-block;
+    display: grid;
+    grid-area: sd1;
     background-color: #fff;
     padding: 0.75rem;
     /* border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
     width: 70vw;
-    top: 10vh;
-    left: 0;
-    position: fixed;
     height: 100%;
+    border-bottom: 1vh solid #cd5c5c;
 }
 
 .form-group {
@@ -102,7 +104,7 @@ button {
 
 #result {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -113,7 +115,7 @@ button {
 
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 700px) {
     /* Adjust styling for small screens */
     body {
         overflow: hidden;
@@ -124,16 +126,16 @@ button {
         height: 10vh;
         width: 100%;
         display: block;
-        position: fixed;
-        top: 0;
     }
 
     #wrapper {
-        overflow:hidden;
+        display: grid;
+        grid-template-areas: 
+        "sd1"
+        "sd2";
         height: 90vh;
         margin: 0;
-        position: fixed;
-        top: 10vh;
+        overflow-y: scroll;
     }
 
     button{
@@ -141,11 +143,14 @@ button {
     }
 
     form {
-        display: block;
+        display: grid;
+        grid-area: sd1;
         width: 100%;
-        height: 65vh;
-        top: 10vh;
-        position: fixed;
+        height: 90vh;
+        margin-top: 1vh;
+        margin: 0 auto;
+        position: relative;
+        overflow-y: scroll;
     }
 
     #label {
@@ -156,13 +161,14 @@ button {
     }
 
     #score{
-        display: block;
+        display: grid;
+        grid-area: sd2;
         width: 100vw;
-        height: 25vh;
-        position: fixed;
-        top: 65vh;
-        bottom: 0;
-        line-height: 20vh;    }
+        position: relative;
+        top: 0;
+        line-height: 10vh;
+        padding: 5% 0;
+    }
 
     #risk-score {
         margin: 0;
