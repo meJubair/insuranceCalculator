@@ -1,5 +1,4 @@
-# InsuranceCalcTask
-Insurance Calculator Task
+# Simple Insurance Calculator
+School assignment to create a simple Insurance Calculator
 
-You can access the webview via the following URL:
-http://jubair.me/insCalApp/
+Live URL: http://jubair.me/insCalApp/
